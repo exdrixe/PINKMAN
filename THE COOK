@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Negative Aura Detector</title>
+<style>
+body {font-family: Arial; text-align: center; background: black; color: white;}
+button {padding: 10px 20px; margin: 10px; border: none; background: red; color: white; font-weight: bold; cursor: pointer;}
+#result {font-size: 30px; margin-top: 20px;}
+</style>
+</head>
+<body>
+<h1>☠ Negative Aura Detector ☠</h1>
+<p>Scan for bad vibes instantly!</p>
+<input id="name" placeholder="Enter a name">
+<br>
+<button onclick="detectAura()">Scan Aura</button>
+<div id="result">--</div>
+<p id="advice"></p>
+
+<script>
+function detectAura(){
+  let negativity = Math.floor(Math.random() * 101);
+  document.getElementById("result").innerText = "Negativity Level: " + negativity + "%";
+  document.getElementById("advice").innerText =
+    negativity > 70 ? "⚠ Danger! Strong bad vibes detected." :
+    negativity > 40 ? "😐 Mixed signals. Stay cautious." :
+    "✨ All clear! Good energy found.";
+}
+</script>
+</body>
+</html>
